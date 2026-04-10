@@ -5,8 +5,8 @@ WORKDIR /app
 # Copy pom.xml first (for caching)
 COPY pom.xml .
 
-# Install Maven
-RUN apk add --no-cache maven
+# Install Maven + update certificates
+RUN apk add --no-cache maven ca-certificates && update-ca-certificates
 
 # Download dependencies
 RUN mvn dependency:go-offline
