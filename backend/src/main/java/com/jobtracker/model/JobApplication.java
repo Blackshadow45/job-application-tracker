@@ -18,7 +18,7 @@ public class JobApplication {
     private LocalDate appliedDate;
     private LocalDate followUpDate;
     private String notes;
-    private Integer salary;
+    private Long salary;
     
     public JobApplication() {}
     
@@ -50,6 +50,6 @@ public class JobApplication {
     public String getNotes() { return notes; }
     public void setNotes(String notes) { this.notes = notes; }
     
-    public Integer getSalary() { return salary; }
-    public void setSalary(Integer salary) { this.salary = salary; }
+    public Long getSalary() { return salary; }
+    public void setSalary(Long salary) { this.salary = salary; }
 }
