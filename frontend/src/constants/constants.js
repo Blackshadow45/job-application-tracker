@@ -1,4 +1,5 @@
-export const API_URL = 'http://localhost:8080/api/applications';
+export const API_URL =
+"https://job-application-tracker-1-xutz.onrender.com/api/applications";
 
 export const JOB_TYPES = ['Full-time', 'Internship', 'Contract', 'Part-time'];
 
