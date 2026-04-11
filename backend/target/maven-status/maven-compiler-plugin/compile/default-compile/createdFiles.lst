@@ -1,0 +1,11 @@
+com\jobtracker\config\CorsConfig.class
+com\jobtracker\controller\AuthController.class
+com\jobtracker\config\CorsConfig$1.class
+com\jobtracker\model\User.class
+com\jobtracker\repository\UserRepository.class
+com\jobtracker\dto\LoginRequest.class
+com\jobtracker\JobTrackerApplication.class
+com\jobtracker\model\JobApplication.class
+com\jobtracker\controller\JobApplicationController.class
+com\jobtracker\repository\JobApplicationRepository.class
+com\jobtracker\dto\DashboardStats.class

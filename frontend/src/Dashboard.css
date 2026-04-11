@@ -1,0 +1,148 @@
+/* PAGE BACKGROUND */
+
+.app-container{
+min-height:100vh;
+background:linear-gradient(135deg,#667eea,#764ba2);
+display:flex;
+justify-content:center;
+}
+
+/* MAIN CONTENT */
+
+.content-wrapper{
+width:100%;
+max-width:1400px;
+padding:40px;
+}
+
+/* HEADER BANNER */
+
+.header-container{
+background:white;
+padding:30px;
+border-radius:18px;
+text-align:center;
+margin-bottom:30px;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+.header-container h1{
+font-size:32px;
+font-weight:700;
+margin-bottom:6px;
+}
+
+.header-container p{
+color:#666;
+font-size:15px;
+}
+
+/* STATS GRID */
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:22px;
+margin-bottom:25px;
+}
+
+/* STAT CARD */
+
+.stat-card{
+padding:26px;
+border-radius:16px;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-weight:600;
+transition:0.25s;
+}
+
+.stat-card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* SEARCH SECTION */
+
+.search-container{
+background:white;
+padding:16px;
+border-radius:14px;
+display:flex;
+gap:15px;
+align-items:center;
+margin-bottom:25px;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* TABLE */
+
+.table-card{
+background:white;
+border-radius:16px;
+padding:15px;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* LOADING */
+
+.loading{
+text-align:center;
+padding:40px;
+font-size:16px;
+color:#555;
+}
+
+/* FOOTER */
+
+.footer{
+text-align:center;
+margin-top:35px;
+color:white;
+font-size:14px;
+}
+
+/* LOGOUT BUTTON (BOTTOM CENTER) */
+
+.logout-container{
+display:flex;
+justify-content:center;
+margin-top:25px;
+}
+
+.logout-btn{
+background:#ef4444;
+border:none;
+color:white;
+padding:10px 24px;
+border-radius:10px;
+font-weight:600;
+cursor:pointer;
+transition:0.2s;
+}
+
+.logout-btn:hover{
+background:#dc2626;
+}
+
+.logout-container{
+margin-top:15px;
+display:flex;
+justify-content:center;
+}
+
+.logout-btn{
+background:#ef4444;
+color:white;
+border:none;
+padding:10px 24px;
+border-radius:10px;
+cursor:pointer;
+font-weight:600;
+}
+
+.logout-btn:hover{
+background:#dc2626;
+}

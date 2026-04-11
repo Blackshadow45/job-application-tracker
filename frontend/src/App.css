@@ -17,9 +17,10 @@ body {
   padding: 2rem 1rem;
 }
 
-.content-wrapper {
-  max-width: 1400px;
-  margin: 0 auto;
+.content-wrapper{
+max-width:1700px;
+margin:auto;
+padding:40px 60px;
 }
 
 .header-card {
@@ -62,6 +63,7 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: slideUp 0.5s ease;
 }
+
 
 .stat-card:hover {
   transform: translateY(-5px);

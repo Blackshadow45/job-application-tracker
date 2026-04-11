@@ -1,6 +1,11 @@
+C:\Users\hp\Desktop\job-application-tracker\backend\src\main\java\com\jobtracker\dto\LoginRequest.java
 C:\Users\hp\Desktop\job-application-tracker\backend\src\main\java\com\jobtracker\model\JobApplication.java
+C:\Users\hp\Desktop\job-application-tracker\backend\src\main\java\com\jobtracker\controller\AuthController.java
 C:\Users\hp\Desktop\job-application-tracker\backend\src\main\java\com\jobtracker\dto\DashboardStats.java
+C:\Users\hp\Desktop\job-application-tracker\backend\src\main\java\com\jobtracker\model\User.java
+C:\Users\hp\Desktop\job-application-tracker\backend\src\main\java\com\jobtracker\repository\UserRepository.java
 C:\Users\hp\Desktop\job-application-tracker\backend\src\main\java\com\jobtracker\controller\JobApplicationController.java
 C:\Users\hp\Desktop\job-application-tracker\backend\src\main\java\com\jobtracker\config\CorsConfig.java
+C:\Users\hp\Desktop\job-application-tracker\backend\src\main\java\com\jobtracker\config\SecurityConfig.java
 C:\Users\hp\Desktop\job-application-tracker\backend\src\main\java\com\jobtracker\JobTrackerApplication.java
 C:\Users\hp\Desktop\job-application-tracker\backend\src\main\java\com\jobtracker\repository\JobApplicationRepository.java
