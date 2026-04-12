@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "./Auth.css";
-
-const API_URL = "https://job-application-tracker-2-8ple.onrender.com/api";
+import { API_URL } from "../constants/constants";
 
 export default function Login(){
 
@@ -17,7 +16,7 @@ export default function Login(){
 
     try{
 
-      const res = await fetch(`${API_URL}/auth/login`,{
+      const res = await fetch(`${API_URL}/api/auth/login`,{
         method:"POST",
         headers:{
           "Content-Type":"application/json"
@@ -39,21 +38,17 @@ export default function Login(){
         navigate("/");
 
       }else{
-
         alert(data.message || "Login failed");
-
       }
 
     }catch(err){
-      alert("Server not responding (Render sleep ho sakta hai, dubara try karo)");
+      alert("Server not responding (Render sleep ho sakta hai)");
     }
 
   };
 
   return(
-
     <div className="auth-container">
-
       <div className="auth-card">
 
         <h2 className="auth-title">Login</h2>
@@ -87,9 +82,6 @@ export default function Login(){
         </div>
 
       </div>
-
     </div>
-
   );
-
 }

@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "./Auth.css";
-
-const API_URL = "https://job-application-tracker-2-8ple.onrender.com/api";
+import { API_URL } from "../constants/constants";
 
 export default function Register(){
 
@@ -17,7 +16,7 @@ export default function Register(){
 
     try{
 
-      const res = await fetch(`${API_URL}/auth/register`,{
+      const res = await fetch(`${API_URL}/api/auth/register`,{
         method:"POST",
         headers:{
           "Content-Type":"application/json"
@@ -29,14 +28,10 @@ export default function Register(){
       });
 
       if(res.ok){
-
         alert("Registration successful");
         navigate("/login");
-
       }else{
-
         alert("Registration failed");
-
       }
 
     }catch(err){
@@ -46,9 +41,7 @@ export default function Register(){
   };
 
   return(
-
     <div className="auth-container">
-
       <div className="auth-card">
 
         <h2 className="auth-title">Register</h2>
@@ -82,9 +75,6 @@ export default function Register(){
         </div>
 
       </div>
-
     </div>
-
   );
-
 }

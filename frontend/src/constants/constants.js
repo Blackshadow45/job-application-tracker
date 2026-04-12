@@ -1,4 +1,4 @@
-export const API_URL = "https://job-application-tracker-2-8ple.onrender.com/api";
+export const API_URL = "https://job-application-tracker-2-8ple.onrender.com";
 
 export const JOB_TYPES = ['Full-time', 'Internship', 'Contract', 'Part-time'];
 
