@@ -2,83 +2,89 @@ import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "./Auth.css";
 
+const API_URL = "https://job-application-tracker-2-8ple.onrender.com/api";
+
 export default function Register(){
 
-const navigate = useNavigate();
+  const navigate = useNavigate();
 
-const [email,setEmail] = useState("");
-const [password,setPassword] = useState("");
+  const [email,setEmail] = useState("");
+  const [password,setPassword] = useState("");
 
-const handleRegister = async (e)=>{
+  const handleRegister = async (e)=>{
 
-e.preventDefault();
+    e.preventDefault();
 
-const res = await fetch("http://localhost:8080/api/auth/register",{
-method:"POST",
-headers:{
-"Content-Type":"application/json"
-},
-body:JSON.stringify({
-email,
-password
-})
-});
+    try{
 
-if(res.ok){
+      const res = await fetch(`${API_URL}/auth/register`,{
+        method:"POST",
+        headers:{
+          "Content-Type":"application/json"
+        },
+        body:JSON.stringify({
+          email,
+          password
+        })
+      });
 
-alert("Registration successful");
-navigate("/login");
+      if(res.ok){
 
-}else{
+        alert("Registration successful");
+        navigate("/login");
 
-alert("Registration failed");
+      }else{
 
-}
+        alert("Registration failed");
 
-};
+      }
 
-return(
+    }catch(err){
+      alert("Server not responding (Render sleep ho sakta hai)");
+    }
 
-<div className="auth-container">
+  };
 
-<div className="auth-card">
+  return(
 
-<h2 className="auth-title">Register</h2>
+    <div className="auth-container">
 
-<form onSubmit={handleRegister}>
+      <div className="auth-card">
 
-<input
-className="auth-input"
-placeholder="Email"
-value={email}
-onChange={(e)=>setEmail(e.target.value)}
-/>
+        <h2 className="auth-title">Register</h2>
 
-<input
-className="auth-input"
-type="password"
-placeholder="Password"
-value={password}
-onChange={(e)=>setPassword(e.target.value)}
-/>
+        <form onSubmit={handleRegister}>
 
-<button className="auth-btn" type="submit">
-Register
-</button>
+          <input
+            className="auth-input"
+            placeholder="Email"
+            value={email}
+            onChange={(e)=>setEmail(e.target.value)}
+          />
 
-</form>
+          <input
+            className="auth-input"
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e)=>setPassword(e.target.value)}
+          />
 
-<div className="auth-link">
+          <button className="auth-btn" type="submit">
+            Register
+          </button>
 
-Already have an account?  
-<Link to="/login"> Login here </Link>
+        </form>
 
-</div>
+        <div className="auth-link">
+          Already have an account?  
+          <Link to="/login"> Login here </Link>
+        </div>
 
-</div>
+      </div>
 
-</div>
+    </div>
 
-);
+  );
 
 }
